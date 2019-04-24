@@ -4,7 +4,7 @@
 #include "Board.h"
 using namespace std;
 
-Red::Red() {
+Red::Red() {				//places all 12 red pieces on their starting starting space
 	static int i = 1;
 	if (i <= 4) {
 		xposition = (i * 2);
@@ -19,7 +19,7 @@ Red::Red() {
 		yposition = 3;
 	}
 
-	CBoard[xposition][yposition] = "Red";
+	CBoard[xposition][yposition] = "Red";			//populates the board array to indicate the placement of a red piece
 	++i;
 }
 
