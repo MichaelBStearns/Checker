@@ -36,7 +36,7 @@ void Red::setPos(int x, int y) {
 	xposition = x;
 	yposition = y;
 }
-bool Red::moveforward(int newpos) {
+bool Red::move(int newpos) {
 	double possibilities[2];
 	int maybe0, maybe1;
 	maybe0 = getPos() + 9;

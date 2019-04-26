@@ -12,5 +12,7 @@ public:
 	~Board();
 
 	string CBoard[8][8];
+
+	friend ostream &operator<< (ostream &output, const Board &CBoard);
 };
 

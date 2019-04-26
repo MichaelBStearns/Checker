@@ -7,7 +7,9 @@ public:
 	RKing(int, int);
 	~RKing();
 
-	bool movebackward(int newpos);
-	bool jumpbackward(int newpos);
+	bool move(int newpos);
+	bool jump(int newpos);
+
+	
 };
 

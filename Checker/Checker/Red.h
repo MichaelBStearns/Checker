@@ -13,7 +13,7 @@ public:
 	double getPos();
 	void setPos(int, int);
 
-	bool moveforward(int pos);
-	bool jump(int pos);
+	virtual bool move(int pos);
+	virtual bool jump(int pos);
 };
 
