@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "Board.h"
+#include "Piece.h"
 #include "BPiece.h"
 #include "BKing.h"
 #include <iostream>

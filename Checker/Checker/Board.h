@@ -5,8 +5,6 @@ using namespace std;
 class Board{
 	
 public:
-	int xposition;
-	int yposition;
 
 	Board();
 	~Board();

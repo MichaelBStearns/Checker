@@ -1,8 +1,8 @@
 #include "pch.h"
 #include <iostream>
+#include "Piece.h"
 #include "RPiece.h"
 #include "RKing.h"
-#include "Board.h"
 using namespace std;
 
 RPiece::RPiece() {}
@@ -41,7 +41,7 @@ void RPiece::setPos(int y, int x) {
 }
 
 void RPiece::makeKing() {
-	CBoard[yposition][xposition] = " RedKing ";
+	CBoard.CBoard[yposition][xposition] = " RedKing ";
 	delete this;
 	RKing(yposition, xposition);
 }
@@ -61,7 +61,7 @@ bool RPiece::move(int newpos, Board Board) {
 		}
 	}
 	if (maybe1 >= 11 && maybe1 <= 88) {
-		if (CBoard[maybe1 / 10][maybe1 % 10] == "         ") {
+		if (CBoard.CBoard[maybe1 / 10][maybe1 % 10] == "         ") {
 			possibilities[1] = maybe1;
 		}
 		else {
@@ -88,12 +88,12 @@ bool RPiece::jump(int newpos, Board Board) {
 	maybe0 = getPos() + 9;
 	maybe1 = getPos() - 11;
 	if (maybe0 >= 11 && maybe0 <= 88) {
-		if (CBoard[maybe0 / 10][maybe0 % 10] == "Red") {
+		if (CBoard.CBoard[maybe0 / 10][maybe0 % 10] == "Red") {
 			possibilities[0] = getPos() + 18;
 		}
 	}
 	if (maybe1 >= 11 && maybe1 <= 88) {
-		if (CBoard[maybe1 / 10][maybe1 % 10] == "Red") {
+		if (CBoard.CBoard[maybe1 / 10][maybe1 % 10] == "Red") {
 			possibilities[1] = getPos() - 22;
 		}
 	}

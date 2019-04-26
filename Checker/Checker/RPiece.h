@@ -1,8 +1,8 @@
 #pragma once
 #include "Red.h"
-#include "Board.h"
+#include "Piece.h"
 
-class RPiece: public Board {
+class RPiece: public Piece {
 
 public:
 	RPiece();
