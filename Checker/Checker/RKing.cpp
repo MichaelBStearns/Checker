@@ -1,14 +1,13 @@
 #include "pch.h"
 #include <iostream>
 #include "RKing.h"
-#include "Red.h"
+#include "RPiece.h"
 using namespace std;
 
 RKing::RKing(int x, int y) {
 	xposition = x;
 	yposition = y;
 }
-
 
 RKing::~RKing(){
 

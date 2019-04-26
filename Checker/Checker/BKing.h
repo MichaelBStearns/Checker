@@ -1,7 +1,8 @@
 #pragma once
+#include "BPiece.h"
 #include "Black.h"
 
-class BKing: public Black{
+class BKing: public BPiece{
 
 public:
 	BKing(int, int);

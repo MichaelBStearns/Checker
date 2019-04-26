@@ -152,17 +152,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BKing.h" />
-    <ClInclude Include="Black.h" />
     <ClInclude Include="Board.h" />
     <ClInclude Include="BPiece.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Red.h" />
     <ClInclude Include="RKing.h" />
     <ClInclude Include="RPiece.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BKing.cpp" />
-    <ClCompile Include="Black.cpp" />
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="BPiece.cpp" />
     <ClCompile Include="Checker.cpp" />
@@ -172,7 +169,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Red.cpp" />
     <ClCompile Include="RKing.cpp" />
     <ClCompile Include="RPiece.cpp" />
   </ItemGroup>

@@ -1,7 +1,7 @@
 #pragma once
-#include "Red.h"
+#include "RPiece.h"
 
-class RKing : public Red {
+class RKing : public RPiece {
 
 public:
 	RKing(int, int);
@@ -9,7 +9,5 @@ public:
 
 	bool move(int newpos);
 	bool jump(int newpos);
-
-	
 };
 

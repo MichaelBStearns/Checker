@@ -1,10 +1,12 @@
 #include "pch.h"
+#include "Board.h"
 #include "BPiece.h"
 #include "BKing.h"
 #include <iostream>
 using namespace std;
 
-BPiece::BPiece(){
+BPiece::BPiece() {}
+BPiece::BPiece(Board Board){
 	static int i = 1;
 	if (i <= 4) {
 		xposition = ((i * 2) - 1);
@@ -19,7 +21,7 @@ BPiece::BPiece(){
 		yposition = 3;
 	}
 
-	CBoard[xposition][yposition] = "Black";
+	Board.CBoard[yposition][xposition] = "  Black  ";
 	++i;
 }
 
@@ -28,43 +30,62 @@ BPiece::~BPiece(){
 
 }
 
-void BPiece::makeKing() {
-	CBoard[xposition][yposition] = "BlackKing";
-	delete this;
-	BKing(xposition, yposition);
+double BPiece::getPos() {
+	int position = (yposition * 10) + xposition;
+	return position;
 }
 
-bool BPiece::move(int newpos) {
+void BPiece::setPos(int y, int x) {
+	xposition = x;
+	yposition = y;
+}
+
+void BPiece::makeKing() {
+	CBoard[yposition][xposition] = "BlackKing";
+	delete this;
+	BKing(yposition, xposition);
+}
+
+bool BPiece::move(int newpos, Board Board) {
 	double possibilities[2];
 	int maybe0, maybe1;
 	maybe0 = getPos() + 11;
-	maybe1 = getPos() - 9;
+	maybe1 = getPos() + 9;
 	if (maybe0 >= 11 && maybe0 <= 88) {
-		if (CBoard[maybe0 / 10][maybe0 % 10] == "Empty") {
+		if (CBoard[maybe0 / 10][maybe0 % 10] == "         ") {
 			possibilities[0] = maybe0;
+		}
+		else { 
+			cout << "Invalid move" << endl;
+			return 0;
 		}
 	}
 	if (maybe1 >= 11 && maybe1 <= 88) {
-		if (CBoard[maybe1 / 10][maybe1 % 10] == "Empty") {
+		if (CBoard[maybe1 / 10][maybe1 % 10] == "         ") {
 			possibilities[1] = maybe1;
+		}
+		else {
+			cout << "Invalid move" << endl;
+			return 0;
 		}
 	}
 	if (newpos == possibilities[0] || newpos == possibilities[1]) {
-		CBoard[xposition][yposition] = "Empty";
-		setPos(newpos / 10, newpos % 10);
-		CBoard[xposition][yposition] = "Black";
+		Board.CBoard[yposition][xposition] = "         ";
+		Board.CBoard[newpos / 10][newpos % 10] = "  Black  ";
+		xposition = newpos % 10;
+		yposition = newpos / 10;
 		return 1;
 	}
 	else {
-		cout << "Invalid move";
+		cout << "Invalid move" << endl;
 		return 0;
 	}
 }
-bool BPiece::jump(int newpos) {
+bool BPiece::jump(int newpos, Board Board) {
 	double possibilities[2];
 	int maybe0, maybe1;
 	maybe0 = getPos() + 11;
-	maybe1 = getPos() - 9;
+	maybe1 = getPos() + 9;
 	if (maybe0 >= 11 && maybe0 <= 88) {
 		if (CBoard[maybe0 / 10][maybe0 % 10] == "Red" || CBoard[maybe0 / 10][maybe0 % 10] == "RedKing") {
 			possibilities[0] = getPos() + 22;
@@ -76,9 +97,9 @@ bool BPiece::jump(int newpos) {
 		}
 	}
 	if (newpos == possibilities[0] || newpos == possibilities[1]) {
-		CBoard[xposition][yposition] = "Empty";
+		Board.CBoard[xposition][yposition] = "Empty";
 		setPos(newpos / 10, newpos % 10);
-		CBoard[xposition][yposition] = "Black";
+		Board.CBoard[xposition][yposition] = "Black";
 		return 1;
 	}
 	else {

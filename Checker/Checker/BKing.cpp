@@ -1,7 +1,7 @@
 #include "pch.h"
 #include <iostream>
 #include "BKing.h"
-#include "Black.h"
+#include "BPiece.h"
 using namespace std;
 
 BKing::BKing(int x, int y){

@@ -1,14 +1,18 @@
 #pragma once
 #include "Red.h"
+#include "Board.h"
 
-class RPiece : public Red {
+class RPiece: public Board {
 
 public:
 	RPiece();
+	RPiece(Board);
 	~RPiece();
 
-	bool move(int pos);
-	bool jump(int pos);
+	double getPos();
+	void setPos(int, int);
+	virtual bool move(int pos, Board);
+	virtual bool jump(int pos, Board);
 	void makeKing();
 };
 

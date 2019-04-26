@@ -1,14 +1,17 @@
 #pragma once
 #include "Black.h"
 
-class BPiece: public Black{
+class BPiece: public Board{
 
 public:
 	BPiece();
+	BPiece(Board);
 	~BPiece();
 
-	bool move(int pos);
-	bool jump(int pos);
+	double getPos();
+	void setPos(int, int);
+	bool move(int pos, Board);
+	bool jump(int pos, Board);
 	void makeKing();
 };
 

@@ -2,9 +2,11 @@
 #include <iostream>
 #include "RPiece.h"
 #include "RKing.h"
+#include "Board.h"
 using namespace std;
 
-RPiece::RPiece(){
+RPiece::RPiece() {}
+RPiece::RPiece(Board Board) {
 	static int i = 1;
 	if (i <= 4) {
 		xposition = (i * 2);
@@ -16,10 +18,10 @@ RPiece::RPiece(){
 	}
 	else if (i >= 9 && i <= 12) {
 		xposition = ((i - 8) * 2);
-		yposition = 3;
+		yposition = 6;
 	}
 
-	CBoard[xposition][yposition] = "Red";
+	Board.CBoard[yposition][xposition] = "   Red   ";
 	++i;
 }
 
@@ -28,40 +30,59 @@ RPiece::~RPiece() {
 
 }
 
-void RPiece::makeKing() {
-	CBoard[xposition][yposition] = "RedKing";
-	delete this;
-	RKing(xposition, yposition);
+double RPiece::getPos() {
+	int position = (yposition * 10) + xposition;
+	return position;
 }
 
-bool RPiece::move(int newpos) {
+void RPiece::setPos(int y, int x) {
+	xposition = x;
+	yposition = y;
+}
+
+void RPiece::makeKing() {
+	CBoard[yposition][xposition] = " RedKing ";
+	delete this;
+	RKing(yposition, xposition);
+}
+
+bool RPiece::move(int newpos, Board Board) {
 	double possibilities[2];
 	int maybe0, maybe1;
-	maybe0 = getPos() + 9;
+	maybe0 = getPos() - 9;
 	maybe1 = getPos() - 11;
 	if (maybe0 >= 11 && maybe0 <= 88) {
-		if (CBoard[maybe0 / 10][maybe0 % 10] == "Empty") {
+		if (CBoard[maybe0 / 10][maybe0 % 10] == "         ") {
 			possibilities[0] = maybe0;
+		}
+		else {
+			cout << "Invalid move" << endl;
+			return 0;
 		}
 	}
 	if (maybe1 >= 11 && maybe1 <= 88) {
-		if (CBoard[maybe1 / 10][maybe1 % 10] == "Empty") {
+		if (CBoard[maybe1 / 10][maybe1 % 10] == "         ") {
 			possibilities[1] = maybe1;
+		}
+		else {
+			cout << "Invalid move" << endl;
+			return 0;
 		}
 	}
 	if (newpos == possibilities[0] || newpos == possibilities[1]) {
-		CBoard[xposition][yposition] = "Empty";
-		setPos(newpos / 10, newpos % 10);
-		CBoard[xposition][yposition] = "Red";
+		Board.CBoard[yposition][xposition] = "         ";
+		Board.CBoard[newpos / 10][newpos % 10] = "   Red   ";
+		xposition = newpos % 10;
+		yposition = newpos / 10;
 		return 1;
 	}
 	else {
-		cout << "Invalid move";
+		cout << "Invalid move" << endl;
 		return 0;
 	}
 }
 
-bool RPiece::jump(int newpos) {
+bool RPiece::jump(int newpos, Board Board) {
 	double possibilities[2];
 	int maybe0, maybe1;
 	maybe0 = getPos() + 9;
@@ -77,9 +98,9 @@ bool RPiece::jump(int newpos) {
 		}
 	}
 	if (newpos == possibilities[0] || newpos == possibilities[1]) {
-		CBoard[xposition][yposition] = "Empty";
+		Board.CBoard[xposition][yposition] = "Empty";
 		setPos(newpos / 10, newpos % 10);
-		CBoard[xposition][yposition] = "Red";
+		Board.CBoard[xposition][yposition] = "Red";
 		return 1;
 	}
 	else {

@@ -18,12 +18,6 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Black.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Red.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="BPiece.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -45,12 +39,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Checker.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Black.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Red.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="BPiece.cpp">
