@@ -4,8 +4,23 @@
 #include "RKing.h"
 using namespace std;
 
-RPiece::RPiece() {
+RPiece::RPiece(){
+	static int i = 1;
+	if (i <= 4) {
+		xposition = (i * 2);
+		yposition = 8;
+	}
+	else if (i >= 5 && i <= 8) {
+		xposition = (((i - 4) * 2) - 1);
+		yposition = 7;
+	}
+	else if (i >= 9 && i <= 12) {
+		xposition = ((i - 8) * 2);
+		yposition = 3;
+	}
 
+	CBoard[xposition][yposition] = "Red";
+	++i;
 }
 
 

@@ -3,8 +3,7 @@
 #include "Board.h"
 using namespace std;
 
-class Red : public Board
-{
+class Red : public Board{
 
 public:
 	Red();
