@@ -1,0 +1,38 @@
+﻿  BKing.cpp
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\bking.cpp(20): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\bking.cpp(21): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\bking.cpp(22): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\bking.cpp(23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\bking.cpp(59): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\bking.cpp(60): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\bking.cpp(61): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\bking.cpp(62): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  BPiece.cpp
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\bpiece.cpp(70): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\bpiece.cpp(71): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\bpiece.cpp(98): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\bpiece.cpp(99): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Checker.cpp
+  Piece.cpp
+  RKing.cpp
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\rking.cpp(19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\rking.cpp(20): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\rking.cpp(21): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\rking.cpp(22): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\rking.cpp(60): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\rking.cpp(61): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\rking.cpp(62): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\rking.cpp(63): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\rking.cpp(66): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\rking.cpp(71): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\rking.cpp(76): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\rking.cpp(81): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  RPiece.cpp
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\rpiece.cpp(70): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\rpiece.cpp(71): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\rpiece.cpp(99): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\rpiece.cpp(100): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Generating Code...
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\rpiece.cpp(58): warning C4715: 'RPiece::action': not all control paths return a value
+c:\users\stear\source\repos\michaelbstearns\checker\checker\checker\bpiece.cpp(58): warning C4715: 'BPiece::action': not all control paths return a value
+  Checker.vcxproj -> C:\Users\stear\source\repos\MichaelBStearns\Checker\Checker\x64\Debug\Checker.exe
