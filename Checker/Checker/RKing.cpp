@@ -14,7 +14,7 @@ RKing::~RKing(){
 }
 
 bool RKing::move(int newpos) {
-	double possibilities[4];
+	int possibilities[4];
 	int maybe0, maybe1, maybe2, maybe3;
 	maybe0 = getPos() + 11;
 	maybe1 = getPos() - 9;
@@ -55,7 +55,7 @@ bool RKing::move(int newpos) {
 
 bool RKing::jump(int newpos) {
 
-	double possibilities[4];
+	int possibilities[4];
 	int maybe0, maybe1, maybe2, maybe3;
 	maybe0 = getPos() + 9;
 	maybe1 = getPos() - 11;

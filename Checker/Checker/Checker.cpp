@@ -30,49 +30,51 @@ int main() {
 			cin >> startloc;
 			cout << "to" << endl;
 			cin >> newloc;
+			//TODO clean up this mess, maybe move ot class?
+			//TODO clean up output window when errors are given
 			if (Board.CBoard[startloc / 10][startloc % 10] == "  Black  ") {
 				if (black1.getPos() == startloc) {
-					correct = black1.move(newloc, Board);
+					correct = black1.action(startloc, newloc, Board);
 				}
 				else if (black2.getPos() == startloc) {
-					correct = black2.move(newloc, Board);
+					correct = black2.action(startloc, newloc, Board);
 				}
 				else if (black3.getPos() == startloc) {
-					correct = black3.move(newloc, Board);
+					correct = black3.action(startloc, newloc, Board);
 				}
 				else if (black4.getPos() == startloc) {
-					correct = black4.move(newloc, Board);
+					correct = black4.action(startloc, newloc, Board);
 				}
 				else if (black5.getPos() == startloc) {
-					correct = black5.move(newloc, Board);
+					correct = black5.action(startloc, newloc, Board);
 				}
 				else if (black6.getPos() == startloc) {
-					correct = black6.move(newloc, Board);
+					correct = black6.action(startloc, newloc, Board);
 				}
 				else if (black7.getPos() == startloc) {
-					correct = black7.move(newloc, Board);
+					correct = black7.action(startloc, newloc, Board);
 				}
 				else if (black8.getPos() == startloc) {
-					correct = black8.move(newloc, Board);
+					correct = black8.action(startloc, newloc, Board);
 				}
 				else if (black9.getPos() == startloc) {
-					correct = black9.move(newloc, Board);
+					correct = black9.action(startloc, newloc, Board);
 				}
 				else if (black10.getPos() == startloc) {
-					correct = black10.move(newloc, Board);
+					correct = black10.action(startloc, newloc, Board);
 				}
 				else if (black11.getPos() == startloc) {
-					correct = black11.move(newloc, Board);
+					correct = black11.action(startloc, newloc, Board);
 				}
 				else if (black12.getPos() == startloc) {
-					correct = black12.move(newloc, Board);
+					correct = black12.action(startloc, newloc, Board);
 				}
 				else {
-					cout << endl << "That's not one of your pieces. Try Again." << endl;
+					cout << endl << "Error. Try Again." << endl;
 				}
 			}
 			else {
-				cout << "That's not one of your pieces. Try Again.";
+				cout << "That's not one of your pieces. Try Again." << endl;
 			}
 		}
 		correct = 0;
@@ -85,48 +87,48 @@ int main() {
 			cin >> newloc;
 			if (Board.CBoard[startloc / 10][startloc % 10] == "   Red   ") {
 				if (red1.getPos() == startloc) {
-					correct = red1.move(newloc, Board);
+					correct = red1.action(startloc, newloc, Board);
 				}
 				else if (red2.getPos() == startloc) {
-					correct = red2.move(newloc, Board);
+					correct = red2.action(startloc, newloc, Board);
 				}
 				else if (red3.getPos() == startloc) {
-					correct = red3.move(newloc, Board);
+					correct = red3.action(startloc, newloc, Board);
 				}
 				else if (red4.getPos() == startloc) {
-					correct = red4.move(newloc, Board);
+					correct = red4.action(startloc, newloc, Board);
 				}
 				else if (red5.getPos() == startloc) {
-					correct = red5.move(newloc, Board);
+					correct = red5.action(startloc, newloc, Board);
 				}
 				else if (red6.getPos() == startloc) {
-					correct = red6.move(newloc, Board);
+					correct = red6.action(startloc, newloc, Board);
 				}
 				else if (red7.getPos() == startloc) {
-					correct = red7.move(newloc, Board);
+					correct = red7.action(startloc, newloc, Board);
 				}
 				else if (red8.getPos() == startloc) {
-					correct = red8.move(newloc, Board);
+					correct = red8.action(startloc, newloc, Board);
 				}
 				else if (red9.getPos() == startloc) {
-					correct = red9.move(newloc, Board);
+					correct = red9.action(startloc, newloc, Board);
 				}
 				else if (red10.getPos() == startloc) {
-					correct = red10.move(newloc, Board);
+					correct = red10.action(startloc, newloc, Board);
 				}
 				else if (red11.getPos() == startloc) {
-					correct = red11.move(newloc, Board);
+					correct = red11.action(startloc, newloc, Board);
 				}
 				else if (red12.getPos() == startloc) {
-					correct = red12.move(newloc, Board);
+					correct = red12.action(startloc, newloc, Board);
 				}
 				else {
-					cout << endl << "That's not one of your pieces. Try Again." << endl;
+					cout << endl << "Error. Try Again." << endl;
 				}
 			}
 
 			else {
-				cout << "That's not one of your pieces. Try Again.";
+				cout << "That's not one of your pieces. Try Again." << endl;
 			}
 		}
 		correct = 0;

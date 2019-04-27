@@ -1,5 +1,4 @@
 #pragma once
-#include "Red.h"
 #include "Piece.h"
 
 class RPiece: public Piece {
@@ -11,8 +10,9 @@ public:
 
 	double getPos();
 	void setPos(int, int);
+	virtual bool action(int oldpos, int newpos, Board);
 	virtual bool move(int pos, Board);
 	virtual bool jump(int pos, Board);
-	void makeKing();
+	bool makeKing();
 };
 

@@ -1,5 +1,5 @@
 #pragma once
-#include "Piece.h"
+#include "Board.h"
 class Piece
 {
 public:
@@ -10,5 +10,9 @@ public:
 
 	Piece();
 	~Piece();
+
+	virtual bool action(int oldpos, int newpos, Board);
+	virtual bool move(int pos, Board);
+	virtual bool jump(int pos, Board);
 };
 
